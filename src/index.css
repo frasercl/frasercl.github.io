@@ -1,13 +1,192 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Merriweather&display=swap');
+
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+	margin: 0;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.page_container {
+	font-family: "Open Sans", Verdana, Arial, sans-serif;
 }
+
+.infoCol {
+	display: flex;
+	position: relative;
+	width: auto;
+	min-height: 80vh;
+	box-shadow: -25px -25px 25px 25px #999;
+	z-index: 10;
+	justify-content: center;
+	align-items: center;
+	padding: 30px;
+	box-sizing: border-box;
+	color: #666;
+
+	/* THE GRAVEYARD OF BACKGROUNDS */
+	/*background-color: #dff9fb;*/
+	/*
+	background: rgb(84,201,178);
+	background: linear-gradient(166deg, rgba(84,201,178,1) 0%, rgba(97,142,186,1) 100%);
+	*/
+}
+
+.projectCol {
+	width: 100%;
+	background-color: #e9edf0;
+	min-width: min-content;
+	perspective: 1000px;
+}
+
+@media only screen and (min-width: 775px) {
+	.infoCol {
+		position: absolute;
+		width: 32vw;
+		height: 100vh;
+		min-height: 0px; /* TODO SET THIS TO CONTENT */
+	}
+
+	.projectCol {
+		position: absolute;
+		left: 32vw;
+		width: 68vw;
+		height: 100%;
+		overflow: auto;
+	}
+}
+
+.infoCol-inmargin {
+	margin-left: auto;
+	margin-right: auto;
+	max-width: 300px;
+}
+
+.infoCol-image {
+	display: block;
+	width: 80%;
+	height: 80%;
+	border-radius: 50%;
+	max-width: 250px;
+}
+
+.infoCol-title {
+	font-size: 3rem;
+	font-weight: 700;
+	text-align: center;
+	margin-block-start: 0.5em;
+}
+
+.infoCol-body {
+	font-size: 1.2rem;
+	font-weight: 300;
+	margin-block-start: 0.7em;
+	margin-block-end: 0.7em;
+}
+
+.infoCol-body-dropcap {
+	float: left;
+	font-size: 2.4rem;
+	margin-right: 8px;
+	font-weight: bold;
+}
+
+.projectCol-inner {
+	position: absolute;
+}
+
+.projectCol-filter {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background-color: #aaa;
+	opacity: 0;
+	z-index: 5;
+	pointer-events: none;
+	will-change: opacity;
+}
+
+.projectCol-filter.filter-on {
+	transition: opacity 0.3s linear;
+	opacity: 0.3;
+}
+
+.projectCol-cards {
+	padding: 20px;
+	width: calc(100% - 40px);
+	display: flex;
+	flex-wrap: wrap;
+	align-items: flex-start;
+	align-content: flex-start;
+}
+
+.card_container {
+	flex-grow: 1;
+	min-width: 300px;
+	max-width: 500px;
+	align-items: flex-start;
+}
+
+.card {
+	position: relative;
+	margin: 20px;
+	padding-bottom: 110%;
+	background-color: white;
+	border-radius: 6px;
+	box-shadow: 0px 0px 8px 0px #999;
+	min-height: min-content;
+	will-change: transform, box-shadow;
+	transition: transform 0.4s cubic-bezier(0, .5, .2, 1), box-shadow 0.2s;
+	transform: rotateY(1e-7deg) rotateX(0deg) rotate(0deg) scale(1);
+}
+
+.card:hover {
+	box-shadow: 0px 0px 20px -3px #888;
+	z-index: 7;
+}
+
+.card-content {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	height: 100%;
+	pointer-events: none;
+	overflow: hidden;
+}
+
+.card-content-image {
+	border-top-left-radius: 6px;
+	border-top-right-radius: 6px;
+	position: absolute;
+	height: 43%;
+	width: 100%;
+	overflow: hidden;
+}
+
+.card-content-image img {
+	max-width: 100%;
+	height: auto;
+}
+
+.card-content-title {
+	font-family: Merriweather, "Open Sans", serif;
+	position: absolute;
+	color: #eee;
+	top: 43%;
+	width: 100%;
+	text-align: center;
+	font-size: 2.4em;
+	background: rgb(180,170,170);
+	background: linear-gradient(166deg, rgba(180,170,170,1) 0%, rgba(108,125,142,1) 100%);
+}
+
+.card-content-description {
+	position: absolute;
+	top: 57%;
+	margin: 0 15px;
+	font-size: 1.4em;
+}
+
+/*
+#31c9c1
+#515dd2
+*/
