@@ -69,10 +69,11 @@ class Card extends React.Component {
 	render() {
 		return (
 			<div className="card_container">
-				<div
+				<a
 					className="card"
-					id={this.props.id}
+					id={this.props.content.id}
 					ref={this.cardElement}
+					href={this.props.content.href}
 					onMouseOver={e => this.onMouseOver(e)}
 					onMouseOut={e => this.onMouseOut(e)}
 					onMouseMove={e => this.onMouseMove(e)}
@@ -84,7 +85,7 @@ class Card extends React.Component {
 						<div className="card-content-title">{this.props.content.title}</div>
 						<div className="card-content-description">{this.props.content.description}</div>
 					</div>
-				</div>
+				</a>
 			</div>
 		);
 	}
@@ -136,7 +137,6 @@ class Projects extends React.Component {
 			const cardState = this.state.cardStates[card.id];
 			cards.push(<Card
 				key={card.id}
-				id={card.id}
 				width={cardState.width}
 				height={cardState.height}
 				onMouseOver={() => this.handleCardHover(card.id, true)}

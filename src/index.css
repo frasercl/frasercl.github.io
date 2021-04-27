@@ -68,14 +68,14 @@ body {
 }
 
 .infoCol-title {
-	font-size: 3rem;
+	font-size: 2.7rem;
 	font-weight: 700;
 	text-align: center;
 	margin-block-start: 0.5em;
 }
 
 .infoCol-body {
-	font-size: 1.2rem;
+	font-size: 1.1rem;
 	font-weight: 300;
 	margin-block-start: 0.7em;
 	margin-block-end: 0.7em;
@@ -126,6 +126,7 @@ body {
 
 .card {
 	position: relative;
+	display: block;
 	margin: 20px;
 	padding-bottom: 110%;
 	background-color: white;
@@ -181,6 +182,7 @@ body {
 
 .card-content-description {
 	position: absolute;
+	color: #555;
 	top: 57%;
 	margin: 0 15px;
 	font-size: 1.4em;
