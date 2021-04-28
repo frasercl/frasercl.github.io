@@ -18,8 +18,8 @@ export const info = {
 
 export const cards = [
 	{
-		id: "Anagram",
-		title: "Anagram",
+		id: "Anagrams",
+		title: "Anagrams",
 		img: img_anagram,
 		img_alt: "Red and blue colored boxes, indicating the differing numbers of letters between two phrases.",
 		description: "A current experiment in which I try to build the best anagram-writing tool I can. It's not much at the moment, but I'm actively adding features. (e.g. dictionary, word reordering)",
