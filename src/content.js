@@ -11,8 +11,7 @@ export const info = {
 	title: "Cameron Fraser",
 	paragraphs: [
 		"Hi! I'm Cameron. I'm a Computer Science student from Seattle who's been programming for 10ish years in all sorts of languages.",
-		"Sometimes I make things for the web. Here are some things I've made for the web.",
-		"Note that this is not a complete list, and is semi-regularly modified. Last update: 04/27/21"
+		"Sometimes I make things for the web. Here are some things I've made for the web."
 	]
 }
 
