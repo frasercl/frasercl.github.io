@@ -42,7 +42,6 @@ class Card extends React.Component {
 	onMouseOver() {
 		if (this.mouseOutWaiting) {
 			//False positive; halt waiting mouseout handler
-			console.log("Prevented mouseout");
 			window.clearTimeout(this.mouseOutTimeout);
 			this.mouseOutWaiting = false;
 		} else {
