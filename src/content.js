@@ -1,5 +1,6 @@
 import me from "./img/me.jpg";
 import img_heightmap from "./img/heightmap.png";
+import img_heightmap3d from "./img/heightmap3d.png";
 import img_anagram from "./img/anagram.png";
 import img_maze from "./img/maze.png";
 import img_maze_hex from "./img/hexmaze.png";
@@ -24,6 +25,14 @@ export const cards = [
 		img_alt: "",
 		description: "A weekend project I wrote at the beginning of my internship, messing with terrain generation and cost-distance analysis.",
 		href: "https://frasercl.github.io/heightmap_sandbox",
+	},
+	{
+		id: "Heightmap3d",
+		title: "3D Heightmaps",
+		img: img_heightmap3d,
+		img_alt: "",
+		description: "The same simple terrain generation algorithm, now running on the GPU to generate an infinite explorable world. Mostly a shader exercise - see the original for more details.",
+		href: "https://frasercl.github.io/heightmap_3d",
 	},
 	{
 		id: "Anagrams",
@@ -54,7 +63,7 @@ export const cards = [
 		title: "BPM Finder",
 		img: img_bpm,
 		img_alt: "",
-		description: "A tool I made a long time ago (2014 or so) to find the tempo of a song.",
+		description: "A tool I made a long time ago to find the tempo of a song.",
 		href: "https://frasercl.github.io/bpm/",
 	},
 	{
